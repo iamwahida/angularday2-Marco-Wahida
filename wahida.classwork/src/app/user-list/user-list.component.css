@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+h5 {
+  margin: 10px;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+p {
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Non-Essential  */
+.property-card {
+  margin: 20px;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+/* Top Half of card, image. */
+.property-image {
+  height: 100%;
+  width: 100%;
+  position: Absolute;
+  top: 0px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Bottom Card Section */
+.property-description {
+  background-color: #FAFAFC;
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  bottom: 0em;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+/* Social Icons */
+/* Property Cards Hover States */
+.property-card:hover .property-description {
+  height: 0em;
+  padding: 0px 1em;
+}
+
+.property-card:hover .property-image {
+  height: 100%;
+}/*# sourceMappingURL=user-list.component.css.map */
