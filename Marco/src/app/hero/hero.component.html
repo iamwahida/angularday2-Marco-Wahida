@@ -1,0 +1,33 @@
+<form [formGroup]="info" (ngSubmit)="onSubmit()">
+    <label>  
+      First Name:
+        <input type="text" formControlName="firstName">
+      </label>
+    <label>  
+      Last Name:  
+      <input type="text" formControlName="lastName">
+      </label>
+    <label>
+        Age:  
+      <input type="text" formControlName="age">
+      </label>
+    <label>  
+      Email:  
+      <input type="text" formControlName="email">
+      </label>
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+
+
+<div class="row ">
+    <div class="col my-3 d-flex justify-content-center" *ngFor="let car of cars">
+        <div class="card position-relative" style="width: 18rem;">
+            <img src="{{car.image}}" class="card-img-top" alt="{{car.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{car.name}}</h5>
+                <p class="card-text pb-2">{{car.text}}</p>
+                <a href="{{car.link}}" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle-x ">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
